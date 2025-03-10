@@ -11,6 +11,10 @@ Ensure the following prerequisites are installed and configured:
 3. Git (for cloning the repository)
 4. Postman (for API testing, collection is provided)
 
+# Note
+***The account-service is dependent on transaction-service to create a new transaction when an account is created with an initial credit.
+Hence, after starting account-service, make sure that transaction-service is also up and running on port 8091.***
+
 # Getting Started - Build & Run Application
 Follow these steps to build and run the application:
 
@@ -22,6 +26,7 @@ mvn clean install
 4. Run the account-service application using the Spring Boot command:
 mvn spring-boot:run
 5. Ensure that the application starts successfully on port 8090
+6. Build and run transaction-service  
 6. You can access the in-memory H2 database console at : http://localhost:8090/h2-console/login.jsp
 7. Use the following credentials to log in:
 Parameter	Value
